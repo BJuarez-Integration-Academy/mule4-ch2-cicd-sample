@@ -6,7 +6,7 @@
     <groupId>0c2f47e6-c7b1-49dd-82fb-ddede01425fb</groupId>
     <!-- Replace PROJECT-NAME -->
     <artifactId>employee-sys-api</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <packaging>mule-application</packaging>
     <!-- Replace PROJECT-NAME -->
     <name>employee-sys-api</name>
@@ -31,6 +31,7 @@
             <version>${mule.maven.plugin.version}</version>
             <extensions>true</extensions>
             <configuration>
+                <classifier>mule-application</classifier>
 			    <cloudhub2Deployment>
 			      <uri>https://anypoint.mulesoft.com</uri>
 			      <provider>MC</provider>
@@ -93,7 +94,7 @@
   <repository>
 	<id>PrivateExchangeRepository</id>
 	<name>Private Exchange repository</name>
-    <url>https://maven.anypoint.mulesoft.com/api/v3/organizations/0c2f47e6-c7b1-49dd-82fb-ddede01425fb/maven</url>
+    <url>https://maven.anypoint.mulesoft.com/api/v3/organizations/${groupId}/maven</url>
 	<layout>default</layout>
   </repository>
 </repositories>
@@ -115,7 +116,7 @@
     <repository>
         <id>anypoint-exchange-v3</id>
         <name>Private Exchange repository</name>
-        <url>https://maven.anypoint.mulesoft.com/api/v3/organizations/0c2f47e6-c7b1-49dd-82fb-ddede01425fb/maven</url>
+        <url>https://maven.anypoint.mulesoft.com/api/v3/organizations/${groupId}/maven</url>
         <layout>default</layout>
      </repository>
 </distributionManagement>
