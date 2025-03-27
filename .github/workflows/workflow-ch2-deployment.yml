@@ -38,4 +38,4 @@ jobs:
       
       - name: Publish to Exchange
         run: |
-          mvn -v
+          mvn clean deploy -DmuleDeploy -DclientID=${{secrets.CLIENT_ID}} -DclientSecret=${{secrets.CLIENT_SECRET}} -Denv=${{ENV}} -DtargetName=${{TARGET_NAME}} -DappName=${{APP_NAME}} -Dreplicas=${{REPLICAS}} -DvCores=${{VCORES}} -s settings.xml
